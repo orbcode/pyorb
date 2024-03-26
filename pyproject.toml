@@ -1,0 +1,18 @@
+[project]
+name = "pyorb"
+description = "Python interface to liborb"
+readme = "README.md"
+authors = [
+    {name = "Dave Marples", email = "dave@marples.net"},
+    {name = "Vegard Storheil Eriksen", email = "zyp@jvnv.net"},
+]
+license = {text = "BSD-3-Clause"}
+requires-python = ">=3.10"
+dynamic = ["version"]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm.version]
+source = "scm"
