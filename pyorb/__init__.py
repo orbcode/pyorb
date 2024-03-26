@@ -1,7 +1,12 @@
+import os
 from ctypes import *
+from ctypes.util import find_library
 import socket
 
-orb = CDLL("liborb.so.1")
+lib = os.environ.get("LIBORB_PATH") or find_library("orb")
+if lib is None:
+    raise RuntimeError("Couldn't locate liborb. Please ensure it can be found in the standard search path or set LIBORB_PATH.")
+orb = CDLL(lib)
 
 # Ensure restype is the correct length for platform
 class my_void_p(c_void_p): 
