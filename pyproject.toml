@@ -1,5 +1,5 @@
 [project]
-name = "pyorb"
+name = "python-orbuculum"
 description = "Python interface to liborb"
 readme = "README.md"
 authors = [
